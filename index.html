@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navho">
+        <div class="container-fluid">
+            <a class="navbar-brand brandname" href="index.html">E-Commerce</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active hocaco" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hocaco" href="#">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hocaco" href="#">Contact</a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Featured Products</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <div class="product-card">
+                    <img src="https://d3chjy2wsvtsxc.cloudfront.net/1.d/preview/c/e/ceebe81a_b2b786a3_14ProMax-DeepPurple.png" class="img-fluid"
+                        alt="Laptop">
+                    <h3>Iphone 14 Pro Max</h3>
+                    <p>Price: $1500</p>
+                    <p id="stock1">In Stock: 5</p>
+                    <button class="btn buttonsss" onclick="addToCart('Laptop', 1500)">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4">
+                <div class="product-card">
+                    <img src="https://shop.vivoglobal.ph/cdn/shop/files/Y18-Wave-Aqua.jpg?v=1716361803&width=600"
+                        class="img-fluid" alt="Headphones">
+                    <h3>Vivo Y18 Pro Max</h3>
+                    <p>Price: $100</p>
+                    <p id="stock2">In Stock: 10</p>
+                    <button class="btn buttonsss" onclick="addToCart('Headphones', 100)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="product-card">
+                    <img src="https://i.ebayimg.com/images/g/2IsAAOSwsQ5e-1ed/s-l400.jpg"
+                        class="img-fluid" alt="Keyboard">
+                    <h3>Realme X50 Pro</h3>
+                    <p>Price: $50</p>
+                    <p id="stock3">In Stock: 20</p>
+                    <button class="btn buttonsss" onclick="addToCart('Keyboard', 50)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Checkout</h2>
+        <div>
+            <span id="cartCount">Cart: 0 items</span>
+        </div>
+        <div id="cartItems"></div>
+        <p id="checkoutTotal">Total: $0.00</p>
+        <button id="checkoutButton" class="btn buttonscheck" onclick="checkout()" disabled>Checkout</button>
+    </div>
+
+    <footer class="footer text-left">
+        <p>Contact Us | Follow Us on Social Media</p>
+    </footer>
+
+    <!-- alert area na mo gawas ang ngi add to cart nimo -->
+    <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">  
+        <div class="modal-dialog">  
+            <div class="modal-content">  
+                <div class="modal-header">  
+                    <h5 class="modal-title" id="notificationModalLabel">Product Added to Cart</h5>  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>  
+                </div>  
+                <div class="modal-body" id="notificationMessage"></div>  
+                <div class="modal-footer">  
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <script src="code.js"></script>
+</body>
+</html>
