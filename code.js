@@ -68,6 +68,3 @@ function displayProducts() {
         productsDiv.appendChild(productDiv);  
     });  
 }  
-
-
-window.onload = displayProducts;
